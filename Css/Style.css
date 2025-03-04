@@ -1,0 +1,50 @@
+/*Base Rules*/
+
+*{
+    margin:0;
+    padding:0;
+}
+
+h1
+{
+    padding-left: 390px;
+    padding-top: 30px;
+}
+
+p{
+    font-family:'Nunito', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: whitesmoke;
+}
+
+
+body{
+    background-color: whitesmoke;
+}
+
+
+form{
+    padding-left: 400px;
+    padding-top: 20px;
+}
+
+
+.cardbody{
+    padding-left: 550px;
+}
+
+
+
+#tran{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(bbb1841aad334189af6e6000b12a2515.jpg);
+    background-size: 100%;
+    background-position:center;
+    background-attachment: fixed;
+
+}
+
+

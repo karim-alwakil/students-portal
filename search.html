@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="library/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/Style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="form.js"></script>
+    <title>Search</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">GIU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a href = "home.html"  role="button" aria-pressed="true" class="btn btn-success">Home</a>
+            </li>
+            <li class="nav-item">
+            
+              <a class="nav-link" href="Register.html">Register </a>
+            </li>
+          </ul>
+       </div>
+      
+      </nav>
+
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" id="myInput" placeholder="Search"   onkeyup="tableSearch()" aria-label="Search" style="border-radius: 20px; width: 70%; background-color:transparent; border-color: rgb(31, 160, 53); border-width: 2px;">
+       
+      </form>
+      <br>
+      <button class="btn btn-success" type="submit"   id="search-input" style="margin-left: 700px; width: 200px; border-radius: 15px; margin-bottom: 30px;">Search</button>     
+
+
+
+      <table  id="myTable" class="table table-dark table-striped" style="width:900px; margin-left: 340px; cursor: pointer;">
+       
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+            </tr>
+          
+               <tr>
+                <td>2000</td>
+                <td>Abdulkarim</td>
+                <td>Alwakil</td>
+                <td>abdulkarim.alwakil@student.giu-uni.de</td>
+               </tr>
+
+               <tr>
+                <td>2001</td>
+                <td>Omar</td>
+                <td>Seliim</td>
+                <td>omar.selim@student.giu-uni.de</td>
+               </tr>
+
+               <tr>
+                <td>2002</td>
+                <td>mohammed</td>
+                <td>ahmed</td>
+                <td>mohammed.ahmed@student.giu-uni.de</td>
+               </tr>
+
+               <tr>
+                <td>2003</td>
+                <td>Mostafa</td>
+                <td>Hosni</td>
+                <td>mostafa.hosni@student.giu-uni.de</td>
+               </tr>
+
+               <tr>
+                <td>2004</td>
+                <td>faid</td>
+                <td>ali</td>
+                <td>faid.ali@student.giu-uni.de</td>
+               </tr>
+ 
+
+
+          <tbody id="myTable">
+          </tbody>
+      </table>
+
+
+<script type="application/javascript">
+
+
+
+function tableSearch(){
+
+  let input, filter, table, tr, td, txtValue; 
+
+//initializing variables
+ input = document.getElementById("myInput");
+ filter = input.value.toUpperCase();
+ table = document.getElementById("myTable");
+ tr = table.getElementsByTagName("tr");
+
+
+ for(let i = 0; i < tr.length; i++){
+     
+    td = tr[i].getElementsByTagName("td")[0] ;
+
+    
+    
+
+
+    if(td){
+      txtValue = td.textContent || td.innerText;
+      if(txtValue.toUpperCase().indexOf(filter) > -1){
+        tr[i].style.display = "" ; 
+      }
+
+     else{
+       tr[i].style.display = "none";
+     }
+
+
+    }
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
